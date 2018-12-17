@@ -43,3 +43,18 @@ def email_formatter(data):
       {departments.count('555')}:555
       {departments.count('888')}:888
       """)
+
+
+      def formatter(some_list):
+    for item in some_list:
+        for key in item.items():
+            company = key[0]
+            depts = []
+            for email in key[1]:
+                depts.append(email[-3:])
+            final = set()
+            for num in depts:
+                final.add(f'{depts.count(num)} in dept {num}')
+        print(f"{company}: {', '.join(el for el in list(final))}.")
+     
+formatter(data)

@@ -1,7 +1,8 @@
 # How to Combine All Argument Types in a Single Python Function video
 
 def greeting(time_of_day, *args, **kwargs):
-  print(f"Hi {' '.join(args)}, I hope that you're having a good {time_of_day}.")
+  print(f"Hi {' '.
+  (args)}, I hope that you're having a good {time_of_day}.")
 
   if kwargs:
     print('Your tasks for the day are:')
