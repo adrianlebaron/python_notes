@@ -1,0 +1,49 @@
+# Homework for tonight
+# Write a function that generates a random hexadecimal color code
+# ex: #f3f3f3
+import random 
+def hex_rand():
+  poss_values = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'a', 'b', 'c', 'd', 'e', 'f']
+  end = []
+  for i in range(6):
+    end.append(str(poss_values[random.randint(0, 15)]))
+  print("#" + "".join(end))
+hex_rand()
+
+# Write a function that takes in a string and returns the letters in alphabetical order
+# function("Hi there") // eehhirt
+def alpha_order(string):
+  split = list(string)
+  split.sort()
+  print("".join(split).strip())
+
+alpha_order("hi there")
+
+
+# Write a function that takes in an dictionary and prints all of the values inside of the given dictionary
+# dict_1 = {
+# key: "value",
+# myKey: "My Value",
+# anotherKey: "another value"
+# }
+
+def dict_values(dict1):
+  for element in dict1.values():
+    print(element)
+
+dict_1 = {
+  'key': "value",
+  'myKey': "My Value",
+  'anotherKey': "another value"
+}
+dict_values(dict_1)
+
+# write a function that takes in a string separated by hyphens and prints the words in a hyphen-separated sequence after sorting them alphabetically.
+# ex: "green-red-black-white "
+# returns: "black-green-red-white "
+def string_hyphen_sort(string):
+  li = string.split("-")
+  li.sort()
+  print("-".join(li))
+
+string_hyphen_sort("green-red-black-white")
